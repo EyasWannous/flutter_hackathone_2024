@@ -172,7 +172,7 @@ class UserCubit extends Cubit<UserState> {
         );
         Constants.onFailure(context,
             message: NetworkExceptions.getErrorMessage(networkException));
-        goRouter.pushReplacementNamed(AppRoute.login.name);
+        goRouter.pushReplacementNamed(AppRoute.login2.name);
       },
     );
   }

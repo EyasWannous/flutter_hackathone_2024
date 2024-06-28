@@ -1,5 +1,6 @@
 import 'package:flutter_hackathone_2024/src/features/auth/presentation/pages/login_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hackathone_2024/src/features/authentication/presentation/pages/login_page2.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../src/features/cache/presentation/pages/details_user_page.dart';
@@ -15,6 +16,7 @@ enum AppRoute {
   navbar,
   detailsUser,
   login,
+  login2,
 }
 
 final Map<AppRoute, dynamic> routes = {
@@ -23,6 +25,7 @@ final Map<AppRoute, dynamic> routes = {
   AppRoute.empty: (context, state) => const EmptyPage(),
   AppRoute.navbar: (context, state) => const NavbarPage(),
   AppRoute.login: (context, state) => const LoginPage(),
+  AppRoute.login2: (context, state) => const LoginPage2(),
   AppRoute.detailsUser: (context, state) => DetailsUserPage(
         id: state.extra[KeyParameterRoute.id.name],
       ),

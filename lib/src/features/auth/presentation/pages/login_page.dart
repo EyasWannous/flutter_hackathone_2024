@@ -191,24 +191,25 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => const SignupPage(),
-                          ),
-                        );
-                      },
-                      child: const Text(
-                        'Signup',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 20,
-                          decoration: TextDecoration.underline,
-                          fontWeight: FontWeight.w500,
-                          color: ColorManager.secondary,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => const SignupPage(),
                         ),
-                      ))
+                      );
+                    },
+                    child: const Text(
+                      'Signup',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 20,
+                        decoration: TextDecoration.underline,
+                        fontWeight: FontWeight.w500,
+                        color: ColorManager.secondary,
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
