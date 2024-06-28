@@ -33,6 +33,7 @@ class ThemeManager {
 
   static ThemeData get light {
     return ThemeData(
+      indicatorColor: colorSchemeLight.onPrimary,
       appBarTheme: AppBarTheme(
         centerTitle: true,
         // color: Colors.transparent,
@@ -179,7 +180,7 @@ class ThemeManager {
   static const primaryFgColorLight = Color(0xFF446440);
   static const secondaryColorLight = Color(0xFF9c9fce);
   static const secondaryFgColorLight = Color(0xFF030f00);
-  static const accentColorLight = Color(0xFF6e67d5);
+  static const accentColorLight = Color(0xFF6E67D5);
   static const accentFgColorLight = Color(0xFFf7fff5);
 
   static const colorSchemeLight = ColorScheme(

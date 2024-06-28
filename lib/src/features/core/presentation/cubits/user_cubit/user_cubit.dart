@@ -43,8 +43,11 @@ class UserCubit extends Cubit<UserState> {
     goRouter.pushReplacementNamed(AppRoute.splash.name);
   }
 
-  Future<void> login(BuildContext context,
-      {required String email, required String password}) async {
+  Future<void> login(
+    BuildContext context, {
+    required String email,
+    required String password,
+  }) async {
     emit(
       const UserState.loading(),
     );

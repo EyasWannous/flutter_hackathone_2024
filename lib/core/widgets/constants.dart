@@ -19,24 +19,26 @@ class Constants {
         builder: (BuildContext context) {
           return Center(
             child: Container(
-                alignment: Alignment.center,
-                width: MediaQuery.of(context).size.width * 0.2,
-                height: MediaQuery.of(context).size.width * 0.2,
-                decoration: BoxDecoration(
-                    color: ColorManager.white,
-                    borderRadius: BorderRadius.circular(8)),
-                child: const CircularProgressIndicator(
-                  color: ColorManager.primary,
-                )),
+              alignment: Alignment.center,
+              width: MediaQuery.of(context).size.width * 0.2,
+              height: MediaQuery.of(context).size.width * 0.2,
+              decoration: BoxDecoration(
+                  color: ColorManager.white,
+                  borderRadius: BorderRadius.circular(8)),
+              child: const CircularProgressIndicator(
+                color: ColorManager.primary,
+              ),
+            ),
           );
         },
         barrierDismissible: false);
     FocusScope.of(context).unfocus();
   }
 
-  static selectData(
-      {required BuildContext context,
-      required TextEditingController controller}) async {
+  static selectData({
+    required BuildContext context,
+    required TextEditingController controller,
+  }) async {
     DateTime selectedDate = DateTime.now();
     var newSelectedDate = await showDatePicker(
       context: context,
@@ -77,8 +79,12 @@ class Constants {
     }
   }
 
-  static showTOAST(BuildContext context,
-      {String? textToast, String? title, ToastStatus? status}) {
+  static showTOAST(
+    BuildContext context, {
+    String? textToast,
+    String? title,
+    ToastStatus? status,
+  }) {
     showToastWidget(
         duration: const Duration(seconds: 5),
         ToastWidget(
@@ -122,10 +128,12 @@ class Constants {
   }
 
   static onFailure(BuildContext context, {String? message, String? title}) {
-    showTOAST(context,
-        textToast: MessageApi.findTextToast(message ?? ''),
-        title: title,
-        status: ToastStatus.failure);
+    showTOAST(
+      context,
+      textToast: MessageApi.findTextToast(message ?? ''),
+      title: title,
+      status: ToastStatus.failure,
+    );
   }
 
   static onNetworkFailure(BuildContext context,

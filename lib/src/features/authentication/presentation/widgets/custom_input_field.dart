@@ -53,6 +53,7 @@ class _CustomInputFieldState extends State<CustomInputField> {
             controller: widget.textEditingController,
             obscureText: (widget.obscureText && _obscureText),
             decoration: InputDecoration(
+              focusedBorder: const UnderlineInputBorder(),
               isDense: (widget.isDense != null) ? widget.isDense : false,
               hintText: widget.hintText,
               suffixIcon: widget.suffixIcon

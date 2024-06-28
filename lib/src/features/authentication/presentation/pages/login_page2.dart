@@ -148,6 +148,25 @@ class _LoginPage2State extends State<LoginPage2> {
                           const SizedBox(
                             height: AppSize.s20,
                           ),
+                          TextButton(
+                            onPressed: () => {
+                              // Navigator.push(
+                              //   context,
+                              //   MaterialPageRoute(
+                              //     builder: (_) => const SignupPage2(),
+                              //   ),
+                              // ),
+                            },
+                            child: Text(
+                              'Skip',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodySmall!
+                                  .copyWith(
+                                    color: Theme.of(context).colorScheme.error,
+                                  ),
+                            ),
+                          ),
                         ],
                       ),
                     ),
